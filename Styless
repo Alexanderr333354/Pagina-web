@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+canvas {
+  margin-top: 30px;
+}
+
+.interpretacion {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+}

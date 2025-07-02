@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfica de Frecuencia - Grupo 207</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grupo 207</h1>
+    <h2>Integrantes:</h2>
+    <p>Jeshua Alexander Rodríguez Sánchez, Alvis Emiliano Rosas Yen, Kevin Alonso Pérez Santes</p>
+
+    <h2>Frecuencia de Valores Observados</h2>
+    <table>
+      <tr><th>Hora</th><th>Frecuencia</th></tr>
+      <tr><td>3</td><td>1</td></tr>
+      <tr><td>4</td><td>1</td></tr>
+      <tr><td>5</td><td>3</td></tr>
+      <tr><td>6</td><td>3</td></tr>
+      <tr><td>7</td><td>3</td></tr>
+      <tr><td>8</td><td>5</td></tr>
+      <tr><td>9</td><td>2</td></tr>
+      <tr><td>10</td><td>2</td></tr>
+      <tr><td>12</td><td>1</td></tr>
+    </table>
+
+    <canvas id="graficaDispersión" width="600" height="300"></canvas>
+
+    <div class="interpretacion">
+      <h2>Interpretación</h2>
+      <p>
+        La gráfica de dispersión muestra la frecuencia con la que se repiten ciertos valores dentro de la muestra dada.
+        Se observa que el valor <strong>8</strong> es el más frecuente con <strong>5 apariciones</strong>.
+        Además, hay varios valores que solo aparecen una vez, como <strong>3, 4 y 12</strong>, lo cual sugiere posibles extremos o casos atípicos.
+        Esta distribución podría verse influenciada por factores externos o un sesgo natural en los datos.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('graficaDispersión').getContext('2d');
+    new Chart(ctx, {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Frecuencia por Hora',
+          data: [
+            {x: 3, y: 1},
+            {x: 4, y: 1},
+            {x: 5, y: 3},
+            {x: 6, y: 3},
+            {x: 7, y: 3},
+            {x: 8, y: 5},
+            {x: 9, y: 2},
+            {x: 10, y: 2},
+            {x: 12, y: 1}
+          ],
+          backgroundColor: 'rgba(52, 152, 219, 1)'
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Hora'
+            },
+            ticks: {
+              precision: 0
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Frecuencia'
+            },
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
